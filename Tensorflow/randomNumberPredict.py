@@ -1,3 +1,9 @@
+# -*- coding: UTF-8 -*-
+
+# 只顯示warning 和 Error 訊息 (默認為1 所有訊息) 
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 import tensorflow as tf
 import numpy as np
 
@@ -30,9 +36,10 @@ init = tf.initialize_all_variables()
 
 sess = tf.Session()
 sess.run(init)  #很重要(要先激活神經網路)
-
+#import time
 for step in range(201):
 	sess.run(train)
 	if step % 20 == 0:
 		print(step,sess.run(Weights),sess.run(biases))
+		#time.sleep(1)
 
