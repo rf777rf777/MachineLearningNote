@@ -4,10 +4,9 @@
 
 ## :closed_book: Tensorflow
   + Basic
-  	++ Session
-    ++ Placeholder
-    ++ Variable
-    ++ Activation
+  	+ Session
+  	+ Placeholder
+  	+ Variable
+  	+ Activation
   + First NN
-  	++ Add_layer
-  + 
+  	+ Add_layer
