@@ -46,4 +46,5 @@ with tf.Session() as sess:
 	for i in range(1000):
 		sess.run(train_step,feed_dict={xs:x_data,ys:y_data})
 		if i % 50:
+			#每50次顯示誤差 觀察誤差是否越來越小
 			print(sess.run(loss,feed_dict={xs:x_data,ys:y_data}))
