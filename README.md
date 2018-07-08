@@ -10,3 +10,5 @@
   	+ Activation
   + First NN
   	+ Add_layer
+  	+ Build NN & Visualize update (結果可視化)
+  + Optimizer (優化器)
