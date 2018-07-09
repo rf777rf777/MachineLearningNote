@@ -9,8 +9,6 @@ from tensorflow.examples.tutorials.mnist import input_data
 #如果電腦裡沒有mnist 會去網路上下載
 mnist = input_data.read_data_sets('MNIST_data',one_hot=True)
 
-import tensorflow as tf 
-
 #activation_function = None 沒有激勵函數 相當於線性
 def add_layer(inputs,in_size,out_size,activation_function=None):
 	#權重
@@ -55,6 +53,7 @@ sess = tf.Session()
 sess.run(tf.initialize_all_variables())
 
 for i in range(1000):
+	#一次只取100張圖片 分批
 	batch_xs,batch_ys = mnist.train.next_batch(100)
 	sess.run(train_step,feed_dict={xs:batch_xs,ys:batch_ys})
 	if i % 50 == 0:
