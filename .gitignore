@@ -1,4 +1,4 @@
 # 檔案名稱 .gitignore
 
-Tensorflow/MNIST_data/
-Tensorflow/logs/
+/Tensorflow/MNIST_data/
+/Tensorflow/logs/
