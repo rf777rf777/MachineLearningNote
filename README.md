@@ -14,3 +14,4 @@
   + Optimizer (優化器)
   + Classification (分類學習)
   + 用 Dropout 解決 overfitting (過擬合)
+  + CNN 卷積神經網路
