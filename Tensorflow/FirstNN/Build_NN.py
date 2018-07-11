@@ -41,7 +41,7 @@ loss = tf.reduce_mean(tf.reduce_sum(tf.square(ys - prediction),
 	reduction_indices=[1]))
 
 #學習優化器
-#學習效率learning_rate必須小於1 這已假設1
+#學習效率learning_rate必須小於1 這裡假設0.1
 #每一個train都縮小誤差minimize(loss)
 train_step = tf.train.GradientDescentOptimizer(0.1).minimize(loss)
 
