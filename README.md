@@ -19,3 +19,5 @@
 
 ## :green_book: Keras
   + Simple Regressor
+  + Classifier
+  + CNN
