@@ -16,7 +16,8 @@
   + 用 Dropout 解決 overfitting (過擬合)
   + CNN 卷積神經網路
   + Save Network
-  + RNN_LSTM
+  + RNN_LSTM_Classifier
+  + RNN_LSTM_Regressor
 
 ## :green_book: Keras
   + Simple Regressor
