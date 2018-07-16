@@ -17,8 +17,9 @@ BATCH_START_TEST = 0
 
 #生成數據的function
 def get_batch():
+    global BATCH_START, TIME_STEPS  
     #xs shape (50batch ,20steps)
-    xs = np.arange(BATCH_START,BATCH_START+TIME_STEPS*BATCH_SIZE).reshape((BATCH_SIZE,TIME_STEPS))
+    xs = np.arange(BATCH_START,BATCH_START+TIME_STEPS*BATCH_SIZE).reshape((BATCH_SIZE,TIME_STEPS)) / (10*np.pi)
     seq = np.sin(xs)
     res = np.cos(xs)
     BATCH_START += TIME_STEPS
@@ -122,7 +123,7 @@ if __name__ == '__main__':
 	writer = tf.summary.FileWriter('logs',sess.graph)
 
 	sess.run(tf.initialize_all_variables())
-'''
+
 	plt.ion()
 	plt.show()
 	for i in range(200):
@@ -154,4 +155,4 @@ if __name__ == '__main__':
 			print('cost:',round(cost,4))
 			result = sess.run(merged,feed_dict)
 			writer.add_summary(result,i)
-'''
+
